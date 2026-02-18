@@ -1,0 +1,8 @@
+{
+  "name": "Teardown - Video Storyboard Creator",
+  "description": "A high-end video analysis tool that converts video files into visual storyboards with AI-driven phrase splitting and automatic frame capturing.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
