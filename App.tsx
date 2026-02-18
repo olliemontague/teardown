@@ -112,7 +112,7 @@ const App: React.FC = () => {
         title: "TEARDOWN_MASTER",
         background: { color: "0A0A0A" },
         objects: [
-          { text: { text: "TEARDOWN STORYBOARD", options: { x: 0.5, y: 0.1, w: 4, h: 0.2, color: "FFFFFF", fontSize: 8, bold: true, opacity: 0.2 } } }
+          { text: { text: "TEARDOWN STORYBOARD", options: { x: 0.5, y: 0.1, w: 4, h: 0.2, color: "FFFFFF", fontSize: 8, bold: true } } }
         ]
       });
 
