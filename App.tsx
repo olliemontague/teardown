@@ -9,6 +9,7 @@ import { StoryboardItem, ProcessingStatus } from './types';
 import pptxgen from "pptxgenjs";
 
 const App: React.FC = () => {
+  const isEmbed = new URLSearchParams(window.location.search).has('embed');
   const [videoFile, setVideoFile] = useState<File | null>(null);
   const [storyboard, setStoryboard] = useState<StoryboardItem[]>([]);
   const [videoDimensions, setVideoDimensions] = useState({ width: 0, height: 0 });
@@ -180,8 +181,8 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen pb-20">
-      <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      {!isEmbed && <Header />}
+      <main className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${isEmbed ? 'mt-4' : 'mt-12'}`}>
         {status.step === 'idle' && (
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <div className="space-y-4">
