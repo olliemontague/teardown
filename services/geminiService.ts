@@ -6,7 +6,7 @@ export const analyzeVideo = async (
   videoBase64: string,
   mimeType: string
 ): Promise<StoryboardItem[]> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
   
   const prompt = `
     Analyze this video and provide a comprehensive storyboard breakdown.
